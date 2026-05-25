@@ -2,7 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Sadoer Youthful Glow | Transform Your Skin in 10 Days',
+  title: 'Sadoer Essence | Transform Your Skin in 10 Days',
   description: 'The ultimate 2-in-1 anti-aging collagen set for smooth, glowing skin without bleaching.',
 };
 

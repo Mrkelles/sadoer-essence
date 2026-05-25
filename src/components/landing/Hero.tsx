@@ -1,15 +1,18 @@
+
 "use client"
 
 import React from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Star } from 'lucide-react'
 
 export function Hero() {
+  const router = useRouter()
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-brand-amber to-[#E09000] py-16 lg:py-24 text-white">
+    <section className="relative overflow-hidden bg-gradient-to-br from-brand-amber to-brand-coral py-16 lg:py-24 text-white">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-8">
@@ -17,7 +20,7 @@ export function Hero() {
               <Badge className="bg-white/20 text-white border-none rounded-full px-4 py-1 uppercase text-[10px] font-bold tracking-widest">
                 10-Day Skin Transformation
               </Badge>
-              <h1 className="text-4xl lg:text-6xl font-black tracking-tight leading-[1.05] text-white">
+              <h1 className="text-4xl lg:text-6xl font-black tracking-tight leading-[1.05] text-white uppercase italic">
                 Transform Rough Skin Into a Baby-Smooth Glow
               </h1>
               <p className="text-lg text-white/80 leading-relaxed max-w-xl font-medium">
@@ -27,7 +30,7 @@ export function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
-                onClick={() => document.getElementById('order-form')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => router.push('/order')}
                 className="h-14 px-10 rounded-full bg-white text-brand-amber text-lg font-bold hover:bg-white/90 shadow-heroPanel transition-all hover:scale-105"
               >
                 PLACE YOUR ORDER NOW
@@ -49,10 +52,10 @@ export function Hero() {
                 ))}
               </div>
               <div className="space-y-1">
-                <div className="flex gap-0.5">
-                  {[1, 2, 3, 4, 5].map(i => <Star key={i} className="h-4 w-4 fill-white text-white" />)}
+                <div className="flex gap-0.5 text-white">
+                  {[1, 2, 3, 4, 5].map(i => <Star key={i} className="h-4 w-4 fill-current" />)}
                 </div>
-                <p className="text-xs font-semibold text-white/90 uppercase tracking-wider">
+                <p className="text-[11px] font-semibold text-white/90 uppercase tracking-wider">
                   Join 3,500+ Men & Women who transformed their skin
                 </p>
               </div>
@@ -77,7 +80,7 @@ export function Hero() {
               </div>
 
               <div className="absolute bottom-1/4 -right-4 z-20 bg-white p-4 rounded-2xl shadow-heroPanel text-brand-amber">
-                <p className="text-2xl font-black">₦29,500</p>
+                <p className="text-2xl font-black tabular-nums">₦29,500</p>
                 <p className="text-xs text-muted-foreground line-through font-bold">₦43,500</p>
               </div>
             </div>

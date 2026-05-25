@@ -74,13 +74,13 @@ export function Hero() {
                 data-ai-hint="product bundle"
               />
               
-              <div className="absolute top-1/4 -left-4 z-20 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 animate-bounce-slow">
+              <div className="absolute top-1/4 -left-4 z-20 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 animate-pulse-subtle">
                 <p className="text-[10px] font-bold text-white uppercase tracking-wider">Bonus Gift</p>
                 <p className="text-sm font-black text-white">Free Face Mask Included!</p>
               </div>
 
               <div className="absolute bottom-1/4 -right-4 z-20 bg-white p-4 rounded-2xl shadow-heroPanel text-brand-amber">
-                <p className="text-2xl font-black tabular-nums">₦29,500</p>
+                <p className="text-2xl font-black tabular-nums text-brand-dark">₦29,500</p>
                 <p className="text-xs text-muted-foreground line-through font-bold">₦43,500</p>
               </div>
             </div>

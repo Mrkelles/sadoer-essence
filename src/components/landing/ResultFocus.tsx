@@ -15,10 +15,10 @@ export function ResultFocus() {
         <div className="max-w-5xl mx-auto space-y-12">
           <div className="aspect-[21/9] relative rounded-[40px] overflow-hidden shadow-heroPanel border-8 border-brand-offwhite">
             <Image
-              src="https://picsum.photos/seed/transformation-large/1200/600"
+              src="https://i.ibb.co/WNPMRZHH/Untitled-500-x-300-px-20251012-014242-0000-removebg-preview-1-2.png"
               alt="Skin Transformation"
               fill
-              className="object-cover"
+              className="object-contain"
               data-ai-hint="skincare results"
             />
           </div>

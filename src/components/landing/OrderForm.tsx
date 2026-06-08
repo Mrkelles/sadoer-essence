@@ -34,7 +34,6 @@ const formSchema = z.object({
   phone: z.string().min(10, 'Valid phone number is required'),
   whatsapp: z.string().min(10, 'WhatsApp number is required'),
   address: z.string().min(10, 'Full address with state is required'),
-  deliveryTime: z.string().min(1, 'Please select a delivery time'),
   questions: z.string().optional(),
 })
 
@@ -51,7 +50,6 @@ export function OrderForm() {
       phone: '',
       whatsapp: '',
       address: '',
-      deliveryTime: '',
       questions: '',
     },
   })
@@ -108,12 +106,9 @@ export function OrderForm() {
                         className="grid grid-cols-1 gap-3"
                       >
                         {[
-                          { id: '1-combo', label: '1 Combo set (1 serum & 1 Cream) + Free Delivery', price: '₦29,500' },
-                          { id: '2-combo', label: '2 Combo set + Free Doorstep Delivery', price: '₦52,000' },
-                          { id: '1-serum', label: '1 Sadoer Collagen Serum + Delivery Fee', price: '₦21,500' },
-                          { id: '2-serums', label: '2 Sadoer Collagen Serums + Free Delivery', price: '₦30,000' },
-                          { id: '1-cream', label: '1 Sadoer Collagen Cream + Delivery Fee', price: '₦26,000' },
-                          { id: '2-creams', label: '2 Sadoer Collagen Creams + Free Delivery', price: '₦35,000' },
+                          { id: '1-combo', label: '1 Combo set (1 serum & 1 Cream) + Free Delivery', price: '₦27,500' },
+                          { id: '2-combo', label: '2 Combo set + Free Doorstep Delivery', price: '₦50,000' },
+                          { id: '3-combo', label: '3 Combo set + Free Doorstep Delivery', price: '₦68,500' },
                         ].map((pkg) => (
                           <div
                             key={pkg.id}
@@ -178,29 +173,6 @@ export function OrderForm() {
                       <FormControl>
                         <Input placeholder="Enter your WhatsApp number" className="rounded-md border-border bg-brand-warmGrey h-11 text-sm focus:ring-brand-amber" {...field} />
                       </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="deliveryTime"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Requested Delivery</FormLabel>
-                      <Select onValueChange={field.onChange} value={field.value}>
-                        <FormControl>
-                          <SelectTrigger className="rounded-md border-border bg-brand-warmGrey h-11 text-sm focus:ring-brand-amber">
-                            <SelectValue placeholder="Select delivery day" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent className="rounded-md">
-                          <SelectItem value="today">Today</SelectItem>
-                          <SelectItem value="tomorrow">Tomorrow</SelectItem>
-                          <SelectItem value="day-after">The Day After Tomorrow</SelectItem>
-                        </SelectContent>
-                      </Select>
                       <FormMessage />
                     </FormItem>
                   )}

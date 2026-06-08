@@ -80,8 +80,8 @@ export function Hero() {
               </div>
 
               <div className="absolute bottom-1/4 -right-4 z-20 bg-white p-4 rounded-2xl shadow-heroPanel text-brand-amber">
-                <p className="text-2xl font-black tabular-nums text-brand-dark">₦29,500</p>
-                <p className="text-xs text-muted-foreground line-through font-bold">₦43,500</p>
+                <p className="text-2xl font-black tabular-nums text-brand-dark">₦27,500</p>
+                <p className="text-xs text-muted-foreground line-through font-bold">₦38,500</p>
               </div>
             </div>
           </div>
